@@ -129,7 +129,7 @@ export default function Dashboard(props) {
         logo={
           <Stack direction='row' spacing='12px' align='center' justify='center'>
             {colorMode === "dark" ? (
-              <Image src={LogoDark} style={{ width: '120px', height: 'auto' }} />
+              <Image src={LogoLight} style={{ width: '120px', height: 'auto' }} />
             ) : (
               <Image src={LogoLight} style={{ width: '120px', height: 'auto' }} />
             )}

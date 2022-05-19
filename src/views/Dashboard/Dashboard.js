@@ -19,6 +19,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 // Custom components
 import Card from "components/Card/Card.js";
 import BarChart from "components/Charts/BarChart";
@@ -29,6 +30,7 @@ import {
   CartIcon,
   DocumentIcon,
   GlobeIcon,
+  DragHandleIcon,
   WalletIcon,
 } from "components/Icons/Icons.js";
 import React from "react";
@@ -69,7 +71,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  Today's Money
+                  Gross Profit
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -108,7 +110,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  Today's Users
+                  Gross Loss
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -147,11 +149,11 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  New Clients
+                  Total Trades
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
-                    +2,503
+                    +253
                   </StatNumber>
                 </Flex>
               </Stat>
@@ -186,7 +188,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  Total Sales
+                  Total Profit
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -226,7 +228,7 @@ export default function Dashboard() {
           maxW={{ sm: "320px", md: "100%" }}>
           <Flex direction='column' mb='40px' p='28px 0px 0px 22px'>
             <Text color='#fff' fontSize='lg' fontWeight='bold' mb='6px'>
-              Sales Overview
+              Account Performance
             </Text>
             <Text color='#fff' fontSize='sm'>
               <Text as='span' color='green.400' fontWeight='bold'>

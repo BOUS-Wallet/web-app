@@ -8,7 +8,6 @@ import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import SignUp from "views/Pages/SignUp.js";
 
-
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import TokenPrice from "components/TokenPrice";
@@ -28,7 +27,11 @@ import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
 import Login from "views/Pages/SignIn";
 
-import { createIcon, StarIcon } from "@chakra-ui/icons";
+import {
+  createIcon,
+  StarIcon,
+  DragHandleIcon
+} from "@chakra-ui/icons";
 
 import {
   HomeIcon,
@@ -53,14 +56,14 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    name: "ROBOT LICENSE",
+    name: "TRADING FUNCTIONS",
     category: "robot",
     rtlName: "صفحات",
     state: "pageCollapse",
     views: [
       {
         path: "/contract",
-        name: "Purchase",
+        name: "Trade",
         rtlName: "لوحة القيادة",
         icon: <RocketIcon color='inherit' />,
         component: Contract,
@@ -68,9 +71,25 @@ var dashRoutes = [
       },
       {
         path: "/purchase-license",
-        name: "Refeers",
+        name: "Buy Robots",
         rtlName: "لوحة القيادة",
         icon: <StarIcon color='inherit' />,
+        component: QuickStart,
+        layout: "/admin",
+      },
+      {
+        path: "/contract",
+        name: "History",
+        rtlName: "لوحة القيادة",
+        icon: <BillIcon color='inherit' />,
+        component: Contract,
+        layout: "/admin",
+      },
+      {
+        path: "/purchase-license",
+        name: "Marketplace",
+        rtlName: "لوحة القيادة",
+        icon: <DragHandleIcon color='inherit' />,
         component: QuickStart,
         layout: "/admin",
       },
